@@ -6,80 +6,179 @@
   <title>Wayra — AI Travel Planner</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+      background: #F8E9BA;
+      color: #06141B;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top nav bar */
+    header {
+      background: #11212D;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .brand {
+      font-size: 24px;
+      font-weight: 800;
+      color: #F8E9BA;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+
+    /* Hero */
+    .hero {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 80px 24px;
       text-align: center;
     }
+
     .logo {
-      font-size: 56px;
+      font-size: 72px;
       font-weight: 800;
-      letter-spacing: -2px;
-      background: linear-gradient(135deg, #f8e9ba, #d4a853);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      letter-spacing: -3px;
+      color: #06141B;
+      line-height: 1;
       margin-bottom: 16px;
     }
+
     .tagline {
       font-size: 18px;
-      color: #888;
+      color: #11212D;
+      opacity: 0.7;
       margin-bottom: 48px;
     }
-    .badge {
-      display: inline-block;
-      background: #1a1a1a;
-      border: 1px solid #333;
-      padding: 12px 28px;
-      border-radius: 12px;
-      font-size: 15px;
-      color: #ccc;
-      margin-bottom: 64px;
+
+    /* Google Play button */
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #F87310;
+      color: #F8E9BA;
       text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 80px;
+      box-shadow: 0 4px 0 #CB5F0F;
+      transition: transform 0.1s, box-shadow 0.1s;
     }
-    .badge:hover { border-color: #555; color: #fff; }
-    nav {
+
+    .play-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #CB5F0F;
+    }
+
+    .play-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #CB5F0F;
+    }
+
+    .play-icon {
+      width: 22px;
+      height: 22px;
+      fill: #F8E9BA;
+    }
+
+    /* Cards */
+    .cards {
       display: flex;
-      gap: 32px;
+      gap: 16px;
       flex-wrap: wrap;
       justify-content: center;
     }
-    nav a {
-      color: #666;
+
+    .card {
+      background: #11212D;
+      border-radius: 16px;
+      padding: 24px 32px;
+      min-width: 200px;
+      text-align: center;
       text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 0 #06141B;
     }
-    nav a:hover { color: #ccc; }
+
+    .card:hover {
+      background: #1a3040;
+      transform: translateY(-2px);
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .card-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #F8E9BA;
+    }
+
+    .card-sub {
+      font-size: 12px;
+      color: #F8E9BA;
+      opacity: 0.5;
+      margin-top: 4px;
+    }
+
+    /* Footer */
     footer {
-      position: fixed;
-      bottom: 24px;
-      color: #444;
+      background: #11212D;
+      padding: 20px 32px;
+      text-align: center;
+      color: #F8E9BA;
       font-size: 13px;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-  <div class="logo">Wayra</div>
-  <p class="tagline">Your AI-powered travel buddy</p>
 
-  <a class="badge" href="https://play.google.com/store" target="_blank">
-    ↓ Available on Google Play
-  </a>
+  <header>
+    <a class="brand" href="index.html">Wayra</a>
+  </header>
 
-  <nav>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="mailto:[YOUR_SUPPORT_EMAIL]">Support</a>
-  </nav>
+  <main class="hero">
+    <div class="logo">Wayra</div>
+    <p class="tagline">Your AI-powered travel buddy</p>
 
-  <footer>&copy; 2026 Wayra. All rights reserved.</footer>
+    <a class="play-btn" href="https://play.google.com/store" target="_blank">
+      <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.18 23.76c.37.2.8.21 1.18.03l12.93-7.47-2.93-2.93-11.18 10.37zM.5 1.12C.19 1.5 0 2.06 0 2.78v18.44c0 .72.19 1.28.5 1.66l.08.08L10.37 13v-.22L.58 3.04l-.08.08zM20.33 10.36l-2.75-1.59-3.27 3.27 3.27 3.27 2.78-1.6c.79-.46.79-1.89-.03-2.35zM4.36.24L17.29 7.71l-2.93 2.93L3.18.27C3.56.09 3.99.1 4.36.24z"/>
+      </svg>
+      Download on Google Play
+    </a>
+
+    <div class="cards">
+      <a class="card" href="privacy-policy.html">
+        <div class="card-icon">🔒</div>
+        <div class="card-label">Privacy Policy</div>
+        <div class="card-sub">How we handle your data</div>
+      </a>
+      <a class="card" href="terms.html">
+        <div class="card-icon">📄</div>
+        <div class="card-label">Terms of Service</div>
+        <div class="card-sub">Rules and conditions</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Wayra. All rights reserved. &nbsp;·&nbsp; support@[YOUR_SUPPORT_EMAIL]</footer>
+
 </body>
 </html>
