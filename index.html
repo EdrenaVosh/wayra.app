@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="003z1RPDNH4gb2QEgow7UKCZTYUUQZR2CBffg8IVMOM" />
+  <meta name="description" content="Wayra is an AI-powered travel planner app for iOS. Plan trips, organize daily itineraries, manage packing lists, and store travel documents — all in one place." />
   <title>Wayra — AI Travel Planner</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,7 +18,6 @@
       flex-direction: column;
     }
 
-    /* Top nav bar */
     header {
       background: #11212D;
       padding: 16px 32px;
@@ -34,82 +34,178 @@
       text-decoration: none;
     }
 
+    a { color: #F87310; }
+    a:hover { color: #CB5F0F; }
 
     /* Hero */
     .hero {
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 80px 24px;
+      padding: 72px 24px 48px;
       text-align: center;
     }
 
     .logo {
-      font-size: 72px;
+      font-size: 64px;
       font-weight: 800;
       letter-spacing: -3px;
       color: #06141B;
       line-height: 1;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .tagline {
-      font-size: 18px;
+      font-size: 20px;
       color: #11212D;
-      opacity: 0.7;
-      margin-bottom: 48px;
+      opacity: 0.65;
+      margin-bottom: 32px;
     }
 
-    /* Links */
-    a {
-      color: #F87310;
-    }
-
-    a:hover {
-      color: #CB5F0F;
-    }
-
-    /* Google Play button */
-    .play-btn {
+    .app-store-btn {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: #F87310;
+      gap: 10px;
+      background: #06141B;
       color: #F8E9BA;
       text-decoration: none;
-      padding: 16px 32px;
+      padding: 14px 28px;
       border-radius: 14px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      margin-bottom: 80px;
-      box-shadow: 0 4px 0 #CB5F0F;
+      margin-bottom: 64px;
+      box-shadow: 0 4px 0 #000;
       transition: transform 0.1s, box-shadow 0.1s;
     }
 
-    .play-btn:hover {
+    .app-store-btn:hover {
+      color: #F8E9BA;
       transform: translateY(-2px);
-      box-shadow: 0 6px 0 #CB5F0F;
+      box-shadow: 0 6px 0 #000;
     }
 
-    .play-btn:active {
+    .app-store-btn:active {
       transform: translateY(2px);
-      box-shadow: 0 2px 0 #CB5F0F;
+      box-shadow: 0 2px 0 #000;
     }
 
-    .play-icon {
-      width: 22px;
-      height: 22px;
-      fill: #F8E9BA;
+    /* Features */
+    .section {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px 64px;
     }
 
-    /* Cards */
-    .cards {
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #F87310;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: #06141B;
+    }
+
+    .section p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #11212D;
+      opacity: 0.8;
+      margin-bottom: 12px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .feature {
+      background: #11212D;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 0 #06141B;
+    }
+
+    .feature-icon {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #F8E9BA;
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: #F8E9BA;
+      opacity: 0.55;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Data section */
+    .data-section {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .data-block {
+      background: #11212D;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 0 #06141B;
+    }
+
+    .data-block h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #F8E9BA;
+      margin-bottom: 8px;
+    }
+
+    .data-block p {
+      font-size: 14px;
+      color: #F8E9BA;
+      opacity: 0.6;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .data-block .tag {
+      display: inline-block;
+      background: #F87310;
+      color: #F8E9BA;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    /* Legal links */
+    .legal-cards {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 64px;
     }
 
     .card {
@@ -128,10 +224,7 @@
       transform: translateY(-2px);
     }
 
-    .card-icon {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+    .card-icon { font-size: 28px; margin-bottom: 10px; }
 
     .card-label {
       font-size: 15px;
@@ -146,7 +239,6 @@
       margin-top: 4px;
     }
 
-    /* Footer */
     footer {
       background: #11212D;
       padding: 20px 32px;
@@ -154,6 +246,14 @@
       color: #F8E9BA;
       font-size: 13px;
       opacity: 0.6;
+    }
+
+    footer a { color: #F87310; }
+
+    @media (max-width: 600px) {
+      .logo { font-size: 48px; }
+      .section h2 { font-size: 22px; }
+      .data-block { padding: 20px; }
     }
   </style>
 </head>
@@ -163,25 +263,100 @@
     <a class="brand" href="index.html">Wayra</a>
   </header>
 
-  <main class="hero">
-    <div class="logo">Wayra</div>
-    <p class="tagline">Your AI-powered travel buddy</p>
+  <main>
 
-    <div class="cards">
-      <a class="card" href="privacy-policy.html">
-        <div class="card-icon">🔒</div>
-        <div class="card-label">Privacy Policy</div>
-        <div class="card-sub">How we handle your data</div>
-      </a>
-      <a class="card" href="terms.html">
-        <div class="card-icon">📄</div>
-        <div class="card-label">Terms of Service</div>
-        <div class="card-sub">Rules and conditions</div>
-      </a>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="logo">Wayra</div>
+      <p class="tagline">Your AI-powered travel companion</p>
+      <span style="display:inline-flex;align-items:center;gap:10px;background:#06141B;color:#F8E9BA;padding:14px 28px;border-radius:14px;font-size:15px;font-weight:600;margin-bottom:64px;opacity:0.5;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F8E9BA" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Coming soon on the App Store
+      </span>
+    </section>
+
+    <!-- What the app does -->
+    <section class="section">
+      <p class="section-title">About the app</p>
+      <h2>Plan your trips, powered by AI</h2>
+      <p>Wayra is a travel planning app for iOS that helps you organize every aspect of your trips — from generating AI-powered day-by-day itineraries to managing packing lists and storing travel documents.</p>
+      <p>Whether you're planning a weekend getaway or a multi-week adventure, Wayra keeps everything in one place and syncs securely across your devices.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">✈️</div>
+          <h3>AI Route Planner</h3>
+          <p>Generate personalized day-by-day itineraries for any destination using AI.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📅</div>
+          <h3>Trip Timeline</h3>
+          <p>Organize activities, places, and reservations by date and time.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧳</div>
+          <h3>Packing Lists</h3>
+          <p>Create and manage packing checklists for each trip.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📄</div>
+          <h3>Travel Documents</h3>
+          <p>Store and access your tickets, bookings, and reservations offline.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data usage — required by Google -->
+    <section class="data-section">
+      <p class="section-title" style="text-align:center;">Data &amp; Privacy</p>
+      <h2 style="text-align:center; margin-bottom:24px;">How we use your data</h2>
+
+      <div class="data-block">
+        <div class="tag">GOOGLE SIGN-IN</div>
+        <h3>Why we request Google account access</h3>
+        <p>Wayra uses Google Sign-In as an optional, convenient way to create and access your account. We request only your basic profile information — your name and email address — to identify your account and personalize your experience. We do not access your Google Drive, Gmail, contacts, or any other Google services. Your Google credentials are never stored by Wayra directly; authentication is handled securely via Supabase.</p>
+      </div>
+
+      <div class="data-block">
+        <div class="tag">ACCOUNT DATA</div>
+        <h3>Name &amp; email address</h3>
+        <p>Used to create and identify your Wayra account. Your email is used to send account-related notifications (password reset, etc.) and is never shared with third parties or used for marketing without your consent.</p>
+      </div>
+
+      <div class="data-block">
+        <div class="tag">APP CONTENT</div>
+        <h3>Trip data</h3>
+        <p>Your trips, itineraries, packing lists, and uploaded documents are stored securely in the cloud and synced to your devices. This data belongs to you and is only accessible by your account. You can delete all your data at any time from the app settings.</p>
+      </div>
+
+      <div class="data-block">
+        <div class="tag">NO SELLING</div>
+        <h3>We do not sell your data</h3>
+        <p>Wayra does not sell, rent, or share your personal data with advertisers or data brokers. For full details, see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+      </div>
+    </section>
+
+    <!-- Legal links -->
+    <div style="display:flex; justify-content:center;">
+      <div class="legal-cards">
+        <a class="card" href="privacy-policy.html">
+          <div class="card-icon">🔒</div>
+          <div class="card-label">Privacy Policy</div>
+          <div class="card-sub">How we handle your data</div>
+        </a>
+        <a class="card" href="terms.html">
+          <div class="card-icon">📄</div>
+          <div class="card-label">Terms of Service</div>
+          <div class="card-sub">Rules and conditions</div>
+        </a>
+      </div>
     </div>
+
   </main>
 
-  <footer>&copy; 2026 Wayra. All rights reserved. &nbsp;·&nbsp; support: <a href="mailto:alexkostin93@gmail.com">alexkostin93@gmail.com</a></footer>
+  <footer>&copy; 2026 Wayra. All rights reserved. &nbsp;·&nbsp; Support: <a href="mailto:alexkostin93@gmail.com">alexkostin93@gmail.com</a></footer>
 
 </body>
 </html>
